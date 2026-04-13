@@ -1,15 +1,23 @@
-def array(arr: list[int]) -> None:
-    for i in arr:
-        print(i, end=' ')
-    print()
-    arr.append(6)  # Adding an element to the end of the array
-    print(arr)
-    print(max(arr))
-    print(min(arr))
-    print(sum(arr))
+size = int(input("Enter the size of the array: "))
+arr = list(map(int, input().split()))
+arr = arr[:size]
+print("Array so far: ", arr)
 
-if __name__ == "__main__":
-    arr = [1, 2, 3, 4, 5]
-    array(arr)
+def getMax(arr):
+    max = arr[0]
+    for i in range(1, len(arr)):
+        if arr[i] > max:
+            max = arr[i]
+    return max
 
-# array([100, 200, 300, 400, 500])
+def getMin(arr):
+    min = arr[0]
+    for i in range(1, len(arr)):
+        if arr[i] < min:
+            min = arr[i]
+    return min
+
+print("Maximum element: ", getMax(arr))
+print("Minimum element: ", getMin(arr))
+
+
