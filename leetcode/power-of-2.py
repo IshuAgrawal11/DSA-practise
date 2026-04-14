@@ -1,6 +1,6 @@
 # first approach
 n = int(input("Enter the number: "))
-i = 0
+i = 1
 found = False
 if n <= 0:
     print("False")
