@@ -10,7 +10,7 @@ def minMirrorPairDistance(nums: list[int]) -> int:
             min_dist = min(min_dist, dist)
 
         
-        seen_indices[mirror] = current_index
+        seen_indices[val] = current_index
 
     return min_dist if found else -1
 
