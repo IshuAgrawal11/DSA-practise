@@ -1,0 +1,1 @@
+        mirror = int(str(val_normalized)[::-1])

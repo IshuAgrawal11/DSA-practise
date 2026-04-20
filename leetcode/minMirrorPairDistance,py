@@ -1,0 +1,20 @@
+def minMirrorPairDistance(nums: list[int]) -> int:
+    seen_indices = {}
+    min_dist = float('inf')
+    found = False
+
+    for current_index, val in enumerate(nums):
+        if val in seen_indices:
+            found = True
+            dist = current_index - seen_indices[val]
+            min_dist = min(min_dist, dist)
+
+        
+        seen_indices[mirror] = current_index
+
+    return min_dist if found else -1
+
+# Test Cases
+print(minMirrorPairDistance([120, 21]))  # Output: 1
+print(minMirrorPairDistance([21, 120]))  # Output: -1
+print(minMirrorPairDistance([12, 21, 45, 33, 54])) # Output: 1
